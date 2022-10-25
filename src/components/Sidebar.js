@@ -14,17 +14,17 @@ const Sidebar = () => {
               Home
             </div>
           </Link>
-          {/* <Link to="/myBlogs" className="link">
+          <Link to="/myBlogs" className="link">
             <div className="menuItems">
               MyBlogs
             </div>
-          </Link> */}
+          </Link>
           <Link to="/newStory" className="link">
             <div className="menuItems">
               New
             </div>
           </Link>
-          {/* <Link to="/edited" className="link">
+          <Link to="/edited" className="link">
             <div className="menuItems">
               Edited
             </div>
@@ -33,14 +33,14 @@ const Sidebar = () => {
             <div className="menuItems">
               Requests
             </div>
-          </Link> */}
-
+          </Link>
+        </div>
+        <div className="logout" >
           <Link to="/about" className="link">
             <div className="menuItems">
               About
             </div>
           </Link>
-
         </div>
 
       </div>

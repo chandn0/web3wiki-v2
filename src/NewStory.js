@@ -92,15 +92,15 @@ const NewStory = () => {
           <button className="writeSubmit" type="submit">
             Publish
           </button>
-          <h2 style={{ textAlign: 'center' }}>Preview</h2>
-          <a style={{ textAlign: 'center' }} href="https://www.markdownguide.org/cheat-sheet/" target="_blank" rel="noopener noreferrer"><h6>Markdown  cheat sheet</h6></a>
-          <div
-            className="content"
-            style={{ marginLeft: '10vh' }}
-            dangerouslySetInnerHTML={{ __html: md.render(text) }}
-          ></div>
         </form>
 
+        {/* <h2 style={{ textAlign: 'center' }}>Preview</h2>
+        <a style={{ textAlign: 'center' }} href="https://www.markdownguide.org/cheat-sheet/" target="_blank" rel="noopener noreferrer"><h6>Markdown  cheat sheet</h6></a>
+        <div className="content">
+          <div
+            dangerouslySetInnerHTML={{ __html: md.render(text) }}
+          ></div>
+        </div> */}
       </div>
     </>
   );

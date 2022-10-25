@@ -7,9 +7,6 @@
   top: 11px;
 }
 
-
-
-
 .App {
   display: flex;
   justify-content: space-between;
@@ -34,22 +31,24 @@
   position: sticky;
   top: 0px;
   width: 100px;
-  border-right: 1px solid rgb(63, 63, 63);
+  /* border-right: 1px solid rgb(63, 63, 63); */
   color: white;
   height: 100vh;
+  border-right: 2px solid rgb(124, 120, 120);
+  /* border-radius: 5px; */
 }
 
 .rightBar {
   position: sticky;
   top: 0px;
   width: calc((100vw - 800px) * 0.4);
-  border-left: 1px solid rgb(63, 63, 63);
+  border-left: 2px solid rgb(63, 63, 63);
   color: white;
   height: 100vh;
 }
 
 .mainWindow {
-  width: 70%;
+  width: 68%;
 }
 
 .logout {

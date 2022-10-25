@@ -46,3 +46,12 @@
   padding: 15px;
   color: #f0f4f7;
 }
+
+.connectwallet {
+  align-items: flex-start;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  right: 20px;
+  top: 11px;
+}

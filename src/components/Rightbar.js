@@ -1,6 +1,7 @@
 import "./Rightbar.css";
 import { ethers } from "ethers";
 import { useState, useEffect } from "react";
+import { ConnectButton } from '@rainbow-me/rainbowkit';
 
 const Rightbar = () => {
   // const { account, } = useMoralis();
@@ -26,6 +27,8 @@ const Rightbar = () => {
   return (
     <>
       <div className="rightbarContent">
+        <div className="connectwallet">  < ConnectButton /></div>
+
         {/* <Input label="Search" name="Search" prefixIcon="search"></Input> */}
 
         <div className="trends">

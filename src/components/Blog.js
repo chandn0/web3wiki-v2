@@ -41,18 +41,20 @@ const Blog = () => {
         <div className="singleBlogContent">
 
           <h1 className="singleBlogTitle">{title}</h1>
-          {/* <p className="singleBlogText">{text}</p> */}
-          <div
+          <p className="singleBlogText">{text}</p>
+          {/* <div
             className="content"
             style={{ marginLeft: '10vh' }}
             dangerouslySetInnerHTML={{ __html: md.render(text) }}
-          ></div>
+          ></div> */}
         </div>
+
       </div>
-      <div onClick={clickHandler} style={{ alignContent: 'center' }}>
-        <button style={{ border: 'none' }}>Improve</button>
+      <div onClick={clickHandler} className="center" >
+        <button style={{ border: 'none', height: "30px", content: "center" }} className="improve" >Improve </button>
       </div>
     </div>
+
   );
 };
 

@@ -4,7 +4,7 @@
 }
 
 .writeFormGroup {
-  margin-left: 150px;
+  margin-left: 40px;
   display: flex;
   align-items: center;
 }
@@ -58,4 +58,12 @@
   cursor: pointer;
   display: flex;
   align-items: center;
+}
+
+.content {
+  width: 70vw;
+  display: flex;
+  padding: 20px;
+
+
 }

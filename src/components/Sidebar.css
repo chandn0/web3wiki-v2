@@ -41,6 +41,7 @@
 
 .menuItems:hover {
   cursor: pointer;
+  background-color: rgb(178, 165, 165);
 }
 
 .logout {

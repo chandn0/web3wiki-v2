@@ -51,7 +51,7 @@ const EditBlog = () => {
             //massage the params to be sent to the create NFT request
 
             //actually create the NFT
-            let transaction = await contract.requestchange(uri, Ids)
+            let transaction = await contract.requestchange(Ids, uri)
             await transaction.wait()
 
             alert("Successfully listed your NFT!");

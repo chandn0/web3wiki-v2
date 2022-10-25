@@ -32,3 +32,20 @@
   font-size: 30px;
   font-weight: 600;
 }
+
+.improve {
+  margin: auto;
+  font-size: large;
+
+}
+
+.improve:hover {
+  background-color: antiquewhite;
+}
+
+.center {
+  margin: auto;
+  width: 100px;
+  /* margin: 10px 50px 20px; */
+  font-size: large;
+}
