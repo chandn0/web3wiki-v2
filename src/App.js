@@ -71,7 +71,6 @@ function App() {
 
 
   useEffect(() => {
-    console.log("in blogs my blogs");
     fetchmyarticles();
   }, []);
 
@@ -90,7 +89,6 @@ function App() {
           co.push(k);
         }
       }
-      console.log(co);
       localStorage.setItem('blogs', JSON.stringify(co));
     }
   }, [articles]);
@@ -108,7 +106,6 @@ function App() {
         k = editedarticlesrequestid[i].toNumber();
         co.push(k);
       }
-      console.log(co);
       localStorage.setItem('editedrequestid', JSON.stringify(co));
       localStorage.setItem("Inrequestedblogs", true);
 

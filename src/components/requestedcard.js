@@ -29,14 +29,14 @@ const Requestedcard = ({ articleId }) => {
     useEffect(() => {
         let k;
         if (obj) {
-            console.log(obj);
+            // console.log(obj);
             let co = [];
             for (let i = 0; i < obj.length; i++) {
                 k = obj[i].toNumber();
                 co.push(k);
             }
             setrequest(co);
-            console.log(co);
+            // console.log(co);
         }
     }, [obj]);
 
