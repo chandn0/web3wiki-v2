@@ -7,7 +7,9 @@ import { ethers } from "ethers";
 const Requestedcard = ({ articleId }) => {
 
     const { account } = useAccount();
-    const [obj, setobj] = useState();
+    const [obj, setobj] = useState([]);
+    const [request, setrequest] = useState();
+
     const provider = new ethers.providers.Web3Provider(window.ethereum);
 
     async function fetcharticles() {
@@ -15,19 +17,8 @@ const Requestedcard = ({ articleId }) => {
             const contract = new ethers.Contract(CONTRACT_ADDRESS, CONTRACT_ABI, provider);
             let ledger = await contract.request_of_articleId(articleId);
             setobj(ledger);
-            let k;
-            if (obj) {
-                let co = [];
-                for (let i = 0; i < obj.length; i++) {
-                    k = obj[i].toNumber();
-                    co.push(k);
-                }
-                setobj(co)
-                console.log(co);
-            }
         } catch (err) {
             console.error(err);
-
         }
     }
 
@@ -35,11 +26,27 @@ const Requestedcard = ({ articleId }) => {
         fetcharticles();
     }, [account]);
 
+    useEffect(() => {
+        let k;
+        if (obj) {
+            console.log(obj);
+            let co = [];
+            for (let i = 0; i < obj.length; i++) {
+                k = obj[i].toNumber();
+                co.push(k);
+            }
+            setrequest(co);
+            console.log(co);
+        }
+    }, [obj]);
+
+
+
     return (
         <div style={{ marginTop: '10px' }}>
-            {(obj) ? (
+            {(request) ? (
                 <div>
-                    {obj.map((number, i) =>
+                    {request.map((number, i) =>
                         <Fetchrequests key={i}
                             requestId={number} />
                     )}

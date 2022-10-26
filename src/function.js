@@ -5,23 +5,23 @@ import {
     CONTRACT_ADDRESS,
 } from "./constants";
 
-export const Read = async () => {
+// export const Read = async () => {
 
-    const { data, isError, isLoading } = useContractRead({
-        address: CONTRACT_ADDRESS,
-        abi: CONTRACT_ABI,
-        functionName: 'getHunger',
-    })
+//     const { data, isError, isLoading } = useContractRead({
+//         address: CONTRACT_ADDRESS,
+//         abi: CONTRACT_ABI,
+//         functionName: 'getHunger',
+//     })
 
-};
+// };
 
-export const Write = async () => {
-    const { config } = usePrepareContractWrite({
-        address: CONTRACT_ADDRESS,
-        abi: CONTRACT_ABI,
-        functionName: 'feed',
-        args: [],
-    })
-    const { data, isLoading, isSuccess, write } = useContractWrite(config)
+// export const Write = async () => {
+//     const { config } = usePrepareContractWrite({
+//         address: CONTRACT_ADDRESS,
+//         abi: CONTRACT_ABI,
+//         functionName: 'feed',
+//         args: [],
+//     })
+//     const { data, isLoading, isSuccess, write } = useContractWrite(config)
 
-}
+// }

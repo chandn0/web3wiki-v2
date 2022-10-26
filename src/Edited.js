@@ -7,9 +7,9 @@ const Edited = () => {
     <div style={{ marginTop: '10px' }}>
       <h2>Edited articles</h2>
       {JSON.parse(localStorage.getItem('editedrequestid')) ? (
-        JSON.parse(localStorage.getItem('editedrequestid')).map((number, i) => {
+        JSON.parse(localStorage.getItem('editedrequestid')).map((numbe, i) => {
           return (<Editedrequests key={i}
-            requestId={number} />)
+            requestId={numbe} />)
         }
         )
       ) : (

@@ -14,7 +14,7 @@ const Fetchrequests = ({ requestId }) => {
 
     const { account } = useAccount();
     const [obj, setobj] = useState();
-    const [on, seton] = useState();
+    // const [on, seton] = useState();
 
     async function fetcharticles() {
         try {
@@ -34,15 +34,15 @@ const Fetchrequests = ({ requestId }) => {
 
     useEffect(() => {
         if (obj) {
-            const record = obj;
-            let re = [];
-            for (const o of record) {
-                re.push(o);
-            }
-            seton(re);
-            if (on) {
-                getAllNFTs(on[2]);
-            }
+            // const record = obj;
+            // let re = [];
+            // for (const o of record) {
+            //     re.push(o);
+            // }
+            // seton(re);
+            // if (on) {
+            getAllNFTs(obj[2]);
+            // }
 
         }
     }, [obj]);
@@ -62,8 +62,8 @@ const Fetchrequests = ({ requestId }) => {
             {blogsContent ? (<div> <h2>{blogsContent.title}</h2>
                 <p>{blogsContent.text}</p>
                 {/* <p>IPFS Content address :{blogsContent.uri}</p> */}
-                <p>ArticleId: {on[1].toNumber()}</p>
-                <p>Total amount:{on[3]}</p>
+                <p>ArticleId: {obj[1].toNumber()}</p>
+                <p>Total amount:{obj[3]}</p>
                 <br></br>
             </div>) : (<div></div>)}
         </div>
