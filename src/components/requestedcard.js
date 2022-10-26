@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Fetchrequests from './Fetchrequests';
 // import 'bootstrap/dist/css/bootstrap.css';
-import { useAccount, useConnect, useDisconnect } from 'wagmi';
+import { useAccount } from 'wagmi';
 import { CONTRACT_ABI, CONTRACT_ADDRESS } from "../constant";
 import { ethers } from "ethers";
 const Requestedcard = ({ articleId }) => {
@@ -34,18 +34,6 @@ const Requestedcard = ({ articleId }) => {
     useEffect(() => {
         fetcharticles();
     }, [account]);
-
-    // useEffect(() => {
-    //     let k;
-    //     if (obj) {
-    //         let co = [];
-    //         for (let i = 0; i < obj.length; i++) {
-    //             k = obj[i].toNumber();
-    //             co.push(k);
-    //         }
-    //         setobj(co)
-    //     }
-    // }, [obj]);
 
     return (
         <div style={{ marginTop: '10px' }}>

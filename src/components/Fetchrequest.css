@@ -1,0 +1,14 @@
+.requests {
+    border: 2px solid rgb(124, 120, 120);
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    cursor: pointer;
+    margin-top: 10px;
+
+}
+
+
+.requests:hover {
+    background-color: rgb(178, 165, 165);
+}

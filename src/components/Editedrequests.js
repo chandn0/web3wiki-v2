@@ -8,7 +8,7 @@ import { useAccount } from 'wagmi';
 import { CONTRACT_ABI, CONTRACT_ADDRESS } from "../constant";
 import { ethers } from 'ethers';
 import './Fetchrequest.css';
-const Fetchrequests = ({ requestId }) => {
+const Editedrequests = ({ requestId }) => {
     const [blogsContent, setBlogsContent] = useState();
     const provider = new ethers.providers.Web3Provider(window.ethereum);
 
@@ -21,6 +21,7 @@ const Fetchrequests = ({ requestId }) => {
             const contract = new ethers.Contract(CONTRACT_ADDRESS, CONTRACT_ABI, provider);
             let ledger = await contract.requestdata(requestId);
             setobj(ledger);
+
         } catch (err) {
             console.error(err);
 
@@ -47,7 +48,6 @@ const Fetchrequests = ({ requestId }) => {
         }
     }, [obj]);
 
-
     async function getAllNFTs(uri) {
         let meta = await axios.get(uri);
         meta = meta.data;
@@ -58,15 +58,17 @@ const Fetchrequests = ({ requestId }) => {
     }
 
     return (
-        <div className='requests'>
-            {blogsContent ? (<div> <h2>{blogsContent.title}</h2>
-                <p>{blogsContent.text}</p>
-                {/* <p>IPFS Content address :{blogsContent.uri}</p> */}
-                <p>ArticleId: {on[1].toNumber()}</p>
-                <p>Total amount:{on[3]}</p>
-                <br></br>
-            </div>) : (<div></div>)}
+        <div className='requests' >
+            {blogsContent ? (
+                <div>
+                    <h2>{blogsContent.title}</h2>
+                    <p>{blogsContent.text}</p>
+                    {/* <p>IPFS Content address :{blogsContent.uri}</p> */}
+                    <p>ArticleId: {on[1].toNumber()}</p>
+                    <p>Total amount:{on[3]}</p>
+                    <br></br>
+                </div>) : (<div></div>)}
         </div>
     );
 };
-export default Fetchrequests;
+export default Editedrequests;

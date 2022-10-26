@@ -28,6 +28,7 @@ function App() {
       const contract = new ethers.Contract(CONTRACT_ADDRESS, CONTRACT_ABI, provider);
       let ledger = await contract.getarticles();
       setarticles(ledger);
+
     } catch (err) {
       console.error(err);
 
@@ -63,7 +64,6 @@ function App() {
 
         k = myarticles[i].toNumber();
         co.push(k);
-
       }
       localStorage.setItem('myblogs_Id', JSON.stringify(co));
     }
@@ -76,8 +76,8 @@ function App() {
   }, []);
 
   useEffect(() => {
-    console.log('empty');
     fetcharticles();
+
   }, [address]);
 
   useEffect(() => {
@@ -85,8 +85,8 @@ function App() {
     if (articles) {
       let co = [];
       for (let i = 0; i < articles.length; i++) {
+        k = articles[i];
         if (i !== 0) {
-          k = articles[i];
           co.push(k);
         }
       }
@@ -96,9 +96,9 @@ function App() {
   }, [articles]);
 
   useEffect(() => {
-    // fetch()
     fetchmyedits();
   }, [address]);
+
 
   useEffect(() => {
     let k;
