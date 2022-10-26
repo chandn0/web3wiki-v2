@@ -27,7 +27,7 @@
 
 .trend:hover {
   cursor: pointer;
-  background-color: #e1e5ea;
+  background-color: rgb(236, 232, 232);
 }
 
 .trendImg {
