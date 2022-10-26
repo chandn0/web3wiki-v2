@@ -1,19 +1,10 @@
-import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import { ethers } from "ethers";
 import BlogCard from "./components/BlogCard";
 import "./Home.css";
 
 const HomeAuth = () => {
-    const provider = new ethers.providers.Web3Provider(window.ethereum);
-    const [obj, setobj] = useState([]);
-    const navigate = useNavigate();
-    const [articallist, setArticallist] = useState();
 
 
-    function clickHandler() {
-        navigate("/newStory");
-    }
+
     return (
         <div >
             <div className="homeAuth_header"><h4>Recommended Articles </h4></div>

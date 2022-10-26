@@ -1,8 +1,6 @@
 import { useState } from "react";
 import "./NewStory.css"
-import Input from "./Input";
 import { Remarkable } from "remarkable"
-import { Link } from "react-router-dom";
 import { uploadFileToIPFS, uploadJSONToIPFS } from "./pinata";
 import { ethers } from "ethers";
 import { CONTRACT_ABI, CONTRACT_ADDRESS } from "./constant";
@@ -93,14 +91,6 @@ const NewStory = () => {
             Publish
           </button>
         </form>
-
-        {/* <h2 style={{ textAlign: 'center' }}>Preview</h2>
-        <a style={{ textAlign: 'center' }} href="https://www.markdownguide.org/cheat-sheet/" target="_blank" rel="noopener noreferrer"><h6>Markdown  cheat sheet</h6></a>
-        <div className="content">
-          <div
-            dangerouslySetInnerHTML={{ __html: md.render(text) }}
-          ></div>
-        </div> */}
       </div>
     </>
   );
