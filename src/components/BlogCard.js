@@ -9,7 +9,6 @@ const BlogCard = ({ uri, articleId }) => {
 
   useEffect(() => {
     getAllNFTs();
-    // fetchBlogurl();
   }, []);
 
   async function getAllNFTs() {
@@ -17,31 +16,10 @@ const BlogCard = ({ uri, articleId }) => {
     meta = meta.data;
     const title = meta.ti;
     const text = meta.text.toString();
-
     setBlogsContent({ title, text, articleId, uri });
     setcheck(true);
   }
 
-  const fetchBlogurl = async () => {
-    if (uri !== undefined) {
-      const res = await axios.get(uri);
-      const externalUrl = res.data.externalUrl.toString();
-      const re = await axios.get(externalUrl);
-      const text = re.data.text.toString();
-      const title = re.data.title;
-      setBlogsContent({ title, text, articleId, externalUrl });
-      setcheck(true);
-    } else if (uri != null) {
-      const res = await axios.get(uri);
-      const externalUrl = res.data.externalUrl.toString();
-      const re = await axios.get(externalUrl);
-      const text = re.data.text.toString();
-      const title = re.data.title;
-      setBlogsContent({ title, text, articleId, externalUrl });
-      setcheck(true);
-
-    }
-  }
   const navigate = useNavigate();
   const clickHandler = () => {
     navigate(`/blog`, { state: { Id: blogsContent.articleId, btext: blogsContent.text, btitle: blogsContent.title } });

@@ -6,7 +6,6 @@ const MyBlogs = () => {
 
   const navigate = useNavigate();
 
-
   function clickHandler() {
     navigate("/newStory");
   }

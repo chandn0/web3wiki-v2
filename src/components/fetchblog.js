@@ -22,28 +22,10 @@ const FetchblogCard = ({ articleId }) => {
 
     }
   }
-  // const { data, error, fetch, isFetching, isLoading } =
-  //   useWeb3ExecuteFunction({
-  //     abi: contractabi,
-  //     contractAddress: contractlocation,
-  //     functionName: "articleuri",
-  //     params: {
-  //       id: articleId,
-  //     },
-  //   });
 
   useEffect(() => {
     fetcharticles();
   }, [account]);
-
-
-  useEffect(() => {
-
-    if (obj) {
-      console.log(obj);
-      localStorage.setItem("articleId", obj);
-    }
-  }, [obj]);
 
   return (
     <>

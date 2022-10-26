@@ -61,7 +61,6 @@ function App() {
     if (myarticles) {
       let co = [];
       for (let i = 0; i < myarticles.length; i++) {
-
         k = myarticles[i].toNumber();
         co.push(k);
       }
