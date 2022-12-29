@@ -17,6 +17,14 @@ const Edited = () => {
           <h2 style={{ textAlign: 'center' }}>Improve other's articles </h2>
         </div>
       )}
+      {
+        JSON.parse(localStorage.getItem('editedrequestid')) && JSON.parse(localStorage.getItem('editedrequestid')).length === 0 ? (
+          <div>
+            <h3 style={{ textAlign: 'center' }}>Improve other's articles </h3>
+          </div>
+        ) : null
+
+      }
     </div>
   );
 };

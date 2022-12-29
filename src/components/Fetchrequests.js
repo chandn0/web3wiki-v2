@@ -49,7 +49,8 @@ const Fetchrequests = ({ requestId }) => {
 
 
     async function getAllNFTs(uri) {
-        let meta = await axios.get(uri);
+        let uri1 = uri.replace("https://gateway.pinata.cloud/ipfs/", "https://ipfs.io/ipfs/");
+        let meta = await axios.get(uri1);
         meta = meta.data;
         const title = meta.ti;
         const text = meta.text.toString();
@@ -59,11 +60,13 @@ const Fetchrequests = ({ requestId }) => {
 
     return (
         <div className='requests'>
-            {blogsContent ? (<div> <h2>{blogsContent.title}</h2>
-                <p>{blogsContent.text}</p>
+            {blogsContent ? (<div> <h2>Title : {blogsContent.title}</h2>
+                <p>Content : {blogsContent.text}</p>
                 {/* <p>IPFS Content address :{blogsContent.uri}</p> */}
                 <p>ArticleId: {obj[1].toNumber()}</p>
-                <p>Total amount:{obj[3]}</p>
+                {/* <p>Total amount:{obj[3]}</p> */}
+                <button className='right'>Accept changes</button>
+                <button className='right'>Reject changes</button>
                 <br></br>
             </div>) : (<div></div>)}
         </div>

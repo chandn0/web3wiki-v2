@@ -12,3 +12,8 @@
 .requests:hover {
     background-color: rgb(236, 232, 232);
 }
+
+.right {
+    margin-left: 20px;
+    margin-right: 20px;
+}
