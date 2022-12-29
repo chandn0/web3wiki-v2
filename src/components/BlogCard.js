@@ -8,16 +8,21 @@ const BlogCard = ({ uri, articleId }) => {
   const [blogsContent, setBlogsContent] = useState();
 
   useEffect(() => {
+    console.log(uri);
     getAllNFTs();
   }, []);
 
   async function getAllNFTs() {
-    let meta = await axios.get(uri);
+    let uri1 = uri.replace("https://gateway.pinata.cloud/ipfs/", "https://ipfs.io/ipfs/");
+    let meta = await axios.get(uri1);
+    console.log(meta);
     meta = meta.data;
+    console.log(meta);
     const title = meta.ti;
     const text = meta.text.toString();
     setBlogsContent({ title, text, articleId, uri });
     setcheck(true);
+    console.log(blogsContent);
   }
 
   const navigate = useNavigate();

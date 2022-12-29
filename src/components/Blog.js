@@ -42,6 +42,7 @@ const Blog = () => {
 
           <h1 className="singleBlogTitle">{title}</h1>
           <p className="singleBlogText">{text}</p>
+          {Id}
           {/* <div
             className="content"
             style={{ marginLeft: '10vh' }}
@@ -53,6 +54,7 @@ const Blog = () => {
       <div onClick={clickHandler} className="center" >
         <button style={{ border: 'none', height: "30px", content: "center" }} className="improve" >Improve </button>
       </div>
+
     </div>
 
   );

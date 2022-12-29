@@ -27,7 +27,11 @@ function App() {
     try {
       const contract = new ethers.Contract(CONTRACT_ADDRESS, CONTRACT_ABI, provider);
       let ledger = await contract.getarticles();
+      ledger = ledger.filter((item) => item !== "0");
+
       setarticles(ledger);
+      localStorage.setItem('blogs', JSON.stringify(ledger));
+
 
     } catch (err) {
       console.error(err);
@@ -78,19 +82,17 @@ function App() {
 
   }, [address]);
 
-  useEffect(() => {
-    let k;
-    if (articles) {
-      let co = [];
-      for (let i = 0; i < articles.length; i++) {
-        k = articles[i];
-        if (i !== 0) {
-          co.push(k);
-        }
-      }
-      localStorage.setItem('blogs', JSON.stringify(co));
-    }
-  }, [articles]);
+  // useEffect(() => {
+  //   let k;
+  //   if (articles) {
+  //     let co = [];
+  //     for (let i = 0; i < articles.length; i++) {
+  //       k = articles[i];
+  //         co.push(k);
+  //     }
+  //     localStorage.setItem('blogs', JSON.stringify(co));
+  //   }
+  // }, [articles]);
 
   useEffect(() => {
     fetchmyedits();
@@ -126,7 +128,7 @@ function App() {
           <div className="mainWindow">
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="*" element={<Home />} />
+              <Route path="*" element={<About />} />
               <Route path="/editblog" element={<EditBlog />} />
               <Route path="/myBlogs" element={<MyBlogs />} />
               <Route path="/edited" element={<Edited />} />
