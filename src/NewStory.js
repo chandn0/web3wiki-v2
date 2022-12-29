@@ -32,7 +32,7 @@ const NewStory = () => {
       let transaction = await contract.createarticle(uri)
       await transaction.wait()
 
-      alert("Successfully listed your NFT!");
+      alert("Published article");
       // updateMessage("");
       // updateFormParams({ name: '', description: '', price: '' });
       // window.location.replace("/")

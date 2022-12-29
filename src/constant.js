@@ -1,6 +1,6 @@
 export const Url = "https://ipfs.io/ipfs";
 
-export const CONTRACT_ADDRESS = "0xD829BE5f9627a52011Ec397447A1e771372674C1";
+export const CONTRACT_ADDRESS = "0x5e1af684811b391578955b7eb13239059eba28cb";
 export const CONTRACT_ABI = [
     {
         "inputs": [
@@ -70,6 +70,11 @@ export const CONTRACT_ABI = [
         "type": "function"
     },
     {
+        "inputs": [],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+    },
+    {
         "inputs": [
             {
                 "internalType": "uint256",
@@ -81,11 +86,6 @@ export const CONTRACT_ABI = [
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
-    },
-    {
-        "inputs": [],
-        "stateMutability": "nonpayable",
-        "type": "constructor"
     },
     {
         "inputs": [
@@ -106,6 +106,30 @@ export const CONTRACT_ABI = [
                 "internalType": "uint256",
                 "name": "",
                 "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "name": "articleid_to_owners",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
             }
         ],
         "stateMutability": "view",
@@ -219,6 +243,25 @@ export const CONTRACT_ABI = [
                 "internalType": "uint256[]",
                 "name": "",
                 "type": "uint256[]"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "id",
+                "type": "uint256"
+            }
+        ],
+        "name": "ownerofarticle",
+        "outputs": [
+            {
+                "internalType": "address[]",
+                "name": "",
+                "type": "address[]"
             }
         ],
         "stateMutability": "view",
